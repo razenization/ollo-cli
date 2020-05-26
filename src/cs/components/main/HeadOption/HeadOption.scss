@@ -1,0 +1,19 @@
+.match-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 5rem;
+  background: #fff;
+  border-radius: 15px;
+  margin: 0 0.2rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    transform: scale(1.3);
+  }
+}

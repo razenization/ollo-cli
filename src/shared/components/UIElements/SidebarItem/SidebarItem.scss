@@ -1,0 +1,69 @@
+@import "../../../vars";
+
+.sidenav__option {
+  margin: 6px 0;
+  height: 60px;
+  width: 90%;
+
+  transition: all 0.22s;
+
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0 0 10px;
+
+  z-index: 1;
+
+  a {
+    display: flex;
+    margin-right: 10%;
+  }
+
+  * {
+    fill: #fff;
+    transition: fill 0.22s;
+  }
+
+  &:hover {
+    background: #fff;
+    * {
+      fill: $ltblue;
+    }
+  }
+
+  &.beta {
+    cursor: default;
+    * {
+      fill: $darkblue;
+    }
+    &:hover {
+      background: $ltblue;
+      &:after {
+        opacity: 1;
+      }
+    }
+    svg {
+      margin-right: 10%;
+    }
+    &:after {
+      content: "В разработке!";
+      padding: 4px 8px;
+      opacity: 0;
+      position: absolute;
+      right: -90%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 7px;
+      z-index: 100;
+      pointer-events: none;
+
+      transition: opacity 0.22s;
+      background: rgba(0, 0, 0, 0.88);
+      color: #fff;
+      font-weight: 500;
+      font-size: 11px;
+    }
+  }
+}

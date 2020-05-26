@@ -1,0 +1,67 @@
+@import "../../../shared/vars";
+
+body {
+  padding: 0;
+}
+
+.tg {
+  background: $ltblue;
+  min-height: 100vh;
+  background-image: url("../../../shared/img/logo-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.tg__body {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  & .row > * {
+    &:first-child {
+      justify-content: flex-end;
+    }
+    &:last-child {
+      justify-content: flex-start;
+    }
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tg__container-helper {
+  color: $darkblue;
+  margin-bottom: 0.4rem;
+}
+
+.tg__container-helper-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    margin: 0 1rem;
+  }
+}
+
+.tg__phone-pic {
+  padding-left: 2.5rem;
+  // transform: scale(0.8);
+}
+
+@media screen and (max-width: 1000px) {
+  .tg {
+    background-image: none;
+  }
+  .tg__body {
+    & .row > * {
+      justify-content: center !important;
+      padding: 0;
+    }
+    .user-content__wrapper {
+      margin-top: 5rem;
+    }
+  }
+}

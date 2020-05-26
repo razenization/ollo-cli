@@ -1,0 +1,49 @@
+@import "../../../../shared/vars";
+
+.match-data__event {
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
+}
+
+.match-data__delim {
+  margin-bottom: 3rem;
+}
+
+.match-data__versus {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.match-data__time_bestof {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.match-data__starttime {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 0.3rem 0.17rem;
+  }
+}
+
+.match-data__timeleft-wrapper {
+  width: 60%;
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  color: $ltblue;
+  background: #fff;
+  border-radius: 5px;
+}
