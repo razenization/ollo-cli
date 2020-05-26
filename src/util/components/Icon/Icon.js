@@ -13,6 +13,15 @@ export const Icon = (props) => {
   if (props.bigger) {
     classList.push("icon-bigger");
   }
+  if (props.hrefNewPage) {
+    return (
+      <div className={classList.join(" ")}>
+        <a href={props.hrefNewPage} target="_blank" rel="noopener noreferrer">
+          {props.icon}
+        </a>
+      </div>
+    );
+  }
 
   if (props.href) {
     return (

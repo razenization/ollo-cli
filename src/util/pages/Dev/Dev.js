@@ -27,11 +27,11 @@ const Dev = () => {
           команды!
         </p>
         <div className="dev__social">
-          <Icon bigger to="/tg" icon={<TgIcon />} />
-          <Icon bigger href="https://vk.com/ollogg" icon={<VkIcon />} />
+          <Icon bigger newPage to="/tg" icon={<TgIcon />} />
+          <Icon bigger hrefNewPage="https://vk.com/ollogg" icon={<VkIcon />} />
           <Icon
             bigger
-            href="https://www.youtube.com/channel/UCcZZ7eZsuJPRRww6DgGBB3g"
+            hrefNewPage="https://www.youtube.com/channel/UCcZZ7eZsuJPRRww6DgGBB3g"
             icon={<YtIcon />}
             nofill
           />
