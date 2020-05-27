@@ -1,0 +1,25 @@
+@import "../../../../../shared/vars";
+
+.match-picks {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-picks__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.match-picks__head_bestof {
+  color: $ltgray;
+  font-weight: 500;
+}
+
+.match-picks__picks {
+  padding: 0.4rem 0;
+}
+
+.match-picks__bans {
+  display: flex;
+  justify-content: space-between;
+}

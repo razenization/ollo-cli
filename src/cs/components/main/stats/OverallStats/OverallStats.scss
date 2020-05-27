@@ -1,0 +1,115 @@
+@import "../../../../../shared/vars";
+
+.overall-stats__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.overall-stats__teamlegend {
+  display: flex;
+}
+
+.overall-stats__teamlegend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 0.75rem;
+
+  img {
+    max-width: 25px;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+
+  &:first-child:before {
+    background: $ltred;
+  }
+
+  &:last-child:before {
+    background: $ltblue;
+  }
+}
+
+.overall-stats__main {
+  display: flex;
+}
+
+.overall-stats-item {
+  text-align: center;
+  width: 100%;
+  margin: 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.overall-stats-item__scales {
+  display: flex;
+  justify-content: space-around;
+}
+
+.overall-stats-item__scale {
+  height: 12vh;
+  width: 1.5vw;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffaea6;
+
+  &:last-child {
+    background: #a7c9ff;
+    .overall-stats-item__scale_inner {
+      background: $ltblue;
+    }
+  }
+}
+
+.overall-stats-item__scale_inner {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: $ltred;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.overall-stats-text {
+  color: #fff;
+}
+
+.overall-stats-item__subtitle {
+  margin-top: 0.4rem;
+}
+
+.text-explain {
+  white-space: nowrap;
+  &:after {
+    content: "?";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-left: 3px;
+    background: rgba(196, 196, 196, 0.5);
+    color: #fff;
+  }
+}

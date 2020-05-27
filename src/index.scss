@@ -6,6 +6,7 @@
 @import "../node_modules/bootstrap/scss/utilities/flex";
 @import "../node_modules/bootstrap/scss/utilities/spacing";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./shared/vars";
 
 html,
 body {
@@ -54,6 +55,7 @@ p {
 
 .pd-default {
   margin-left: 120px;
+  padding: 1rem;
   // padding: 0 calc(54vw - 960px);
 }
 
@@ -62,4 +64,24 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.white-pd-rounded {
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1rem;
+}
+
+.header-blue {
+  color: $ltblue;
+  font-weight: 500;
+}
+
+.no-pseudo {
+  &:before {
+    display: none;
+  }
+  &:after {
+    display: none;
+  }
 }

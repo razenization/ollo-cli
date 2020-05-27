@@ -1,0 +1,64 @@
+@import "../../../../../shared/vars";
+
+.streams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.streams__header {
+  margin-bottom: 0.8rem;
+}
+
+.streams-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 15px;
+  background: $ltltgray;
+  padding: 7px 10px;
+  margin: 4px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s;
+
+  &:hover {
+    background: $ltblue;
+    .streams-item__name {
+      color: #fff;
+    }
+    .streams-item__watchers {
+      color: #fff;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.streams-item__col {
+  display: flex;
+  align-items: center;
+}
+
+.streams-item__name {
+  color: $black;
+}
+
+.streams-item__flag {
+  margin-left: 0.5rem;
+  margin-top: -2px;
+}
+
+.streams-item__watchers {
+  color: $ltblue;
+  display: flex;
+  align-items: center;
+}
+
+.streams-item__watchers_text {
+  margin-right: 7px;
+}

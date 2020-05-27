@@ -1,0 +1,31 @@
+@import "../../../../../shared/vars";
+
+.bet-calculator {
+  background: $ltltgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bet-calculator__team-select__header {
+  font-weight: 500;
+}
+
+.bet-calculator__teams {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bet-calculator__teamimg {
+  max-width: 25px;
+  cursor: pointer;
+
+  &.grayscale {
+    filter: grayscale(100%);
+  }
+}
+
+.bet-calculator__bookhead {
+  font-weight: 500;
+  font-size: 0.75rem;
+}

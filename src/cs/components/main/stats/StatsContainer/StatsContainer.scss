@@ -1,0 +1,41 @@
+@import "../../../../../shared/vars";
+
+.stats-container {
+  margin-top: 1rem;
+}
+
+.stats-switch {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.stats-switch__option {
+  width: 33.33333%;
+  text-align: center;
+  border: 1px solid $ltblue;
+  color: $ltblue;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: all 0.22s;
+  cursor: pointer;
+
+  &:hover {
+    background: $ltblue;
+    color: #fff;
+  }
+
+  &:first-child {
+    border-radius: 15px 0 0 15px;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+  }
+}
+
+.stats-switch__option_active {
+  background: $ltblue;
+  color: #fff;
+}

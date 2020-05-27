@@ -12,6 +12,7 @@
   display: inline-block;
   transition: all 0.22s;
   margin: 2rem 0;
+
   &:hover,
   &:active {
     background: $ltblue;
@@ -20,6 +21,21 @@
   &:focus {
     outline: none;
   }
+}
+
+.button--green {
+  background: $green;
+  color: #fff;
+  // &:hover,
+  // &:active {
+  //   background: #fff;
+  //   border-color: #fff;
+  //   color: $ltblue;
+  // }
+}
+
+.button--mdef {
+  margin: 0;
 }
 
 .button--inverse {

@@ -1,0 +1,157 @@
+@import "../../../../../shared/vars";
+
+.bet-info__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.bet-info__options {
+  display: flex;
+}
+
+.bet-info__option {
+  padding: 7px 15px;
+  border-radius: 15px;
+  border: 1px solid $ltblue;
+  background: none;
+  color: $ltblue;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: all 0.22s;
+
+  &:hover {
+    background: $ltblue;
+    color: #fff;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.bet-info__contentwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bet-info__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bet-info__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0.5rem;
+}
+
+.bet-info__teams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-bottom: 5px;
+}
+
+.bet-info__teamimg {
+  padding: 0.75rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: $ltltgray;
+  border-radius: 1rem;
+}
+
+.bet-info__vs {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.bet-info__main__betoption {
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: 4.5rem;
+  padding: 4px;
+  text-align: center;
+  background: $ltltgray;
+  border-radius: 15px;
+  margin: 2px 0;
+  // white-space: nowrap;
+}
+
+.bet-info__bookies {
+  display: flex;
+  // width: 100%;
+}
+
+.bet-info__bookie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  background: $ltltgray;
+  padding: 3px;
+  // width: 100%;
+  margin: 0 0.3rem;
+}
+
+.bet-info__bookie__bonuswrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    margin-right: 4px;
+    transform: scale(1.2);
+  }
+}
+
+.bet-info__bookie__bonus {
+  color: $ltblue;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.bet-info__bookie__img {
+  background: #e1e7f5;
+  // padding: 2rem;
+  padding: 0.75rem;
+  width: 5rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.bet-info__bookie__kef {
+  color: $ltgray;
+  margin: 2px 0;
+  text-align: center;
+
+  &:last-child {
+    &:before {
+      content: "";
+      display: block;
+      width: 5rem;
+      margin: 0 auto;
+      height: 2px;
+      background: #e1e7f5;
+    }
+  }
+}
+
+.kef-higher {
+  color: $ltblue;
+}

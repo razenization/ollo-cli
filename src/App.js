@@ -12,20 +12,20 @@ import LoadingSpinner from "./shared/components/UIElements/LoadingSpinner/Loadin
 
 const Dev = React.lazy(() => import("./util/pages/Dev/Dev"));
 const Telegram = React.lazy(() => import("./util/pages/Telegram/Telegram"));
-// const CsMain = React.lazy(() => import("./cs/pages/CsMain/CsMain"));
-// const CsPrematch = React.lazy(() => import("./cs/pages/CsPrematch/CsPrematch"));
+const CsMain = React.lazy(() => import("./cs/pages/CsMain/CsMain"));
+const CsPrematch = React.lazy(() => import("./cs/pages/CsPrematch/CsPrematch"));
 
 const App = () => {
   let routes;
 
   routes = (
     <Switch>
-      {/* <Route path="/cs/:mid" exact>
+      <Route path="/cs/:mid" exact>
         <CsPrematch />
       </Route>
       <Route path="/cs/" exact>
         <CsMain />
-      </Route> */}
+      </Route>
       <Route path="/" exact>
         <Dev />
       </Route>
