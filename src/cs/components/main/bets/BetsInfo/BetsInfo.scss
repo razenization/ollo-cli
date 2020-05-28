@@ -40,11 +40,13 @@
 .bet-info__contentwrapper {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .bet-info__content {
   display: flex;
   justify-content: space-between;
+  width: 80%;
 }
 
 .bet-info__main {
@@ -90,11 +92,16 @@
 }
 
 .bet-info__bookies {
-  display: flex;
-  // width: 100%;
+  // display: flex;
+  display: grid;
+  // grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, 102px);
+  justify-content: center;
+  width: 100%;
 }
 
 .bet-info__bookie {
+  grid-column: 1fr;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,9 +132,10 @@
 .bet-info__bookie__img {
   background: #e1e7f5;
   // padding: 2rem;
-  padding: 0.75rem;
-  width: 5rem;
-  height: 9rem;
+  // padding: 0.75rem;
+  // width: 5rem;
+  // height: 9rem;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +152,8 @@
     &:before {
       content: "";
       display: block;
-      width: 5rem;
+      // width: 5rem;
+      width: 100%;
       margin: 0 auto;
       height: 2px;
       background: #e1e7f5;

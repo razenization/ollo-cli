@@ -85,3 +85,29 @@ p {
     display: none;
   }
 }
+
+.nine-to-three {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.grid {
+  > * {
+    &:first-child {
+      margin-right: 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}
+
+.grid-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.seven-to-five {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+}

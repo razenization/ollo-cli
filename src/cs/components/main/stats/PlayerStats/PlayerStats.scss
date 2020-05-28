@@ -1,0 +1,167 @@
+@import "../../../../../shared/vars";
+
+.player-stats {
+  display: flex;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.player-box {
+  display: flex;
+  width: 37.5%;
+}
+
+.player-box__team {
+  width: 15%;
+  text-align: center;
+}
+
+.player-box__team-player {
+  margin: 15px 0;
+  transform: scale(1.1);
+  cursor: pointer;
+
+  &.team-player_active {
+    .team-player__nick {
+      color: $ltblue;
+    }
+    .team-player__img {
+      background: linear-gradient(
+        0deg,
+        rgba(52, 119, 219, 0.6) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}
+
+.team-player__img {
+  border-radius: 50%;
+  // padding: 0.3rem;
+  transform: scale(1.1);
+  background: linear-gradient(
+    0deg,
+    rgba(196, 196, 196, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.team-player__nick {
+  line-height: 1;
+  font-size: 0.75rem;
+  color: $black;
+  font-weight: 500;
+}
+
+.player-box__current-player {
+  height: 100%;
+  width: 85%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  position: relative;
+  margin-bottom: -1rem;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 100;
+  }
+
+  > * {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.current-player__team {
+  font-size: 1.6rem;
+  color: $ltblue;
+  font-weight: 600;
+}
+
+.current-player__nick {
+  font-size: 0.9rem;
+  color: $ltgray;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.current-player__team-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 15%;
+  width: 55%;
+  filter: grayscale(100%) blur(3px);
+  opacity: 0.6;
+}
+
+.players-comparison {
+  width: 25%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: -2rem;
+}
+
+.players-comparison__content {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.players-comparison__goteam {
+  border-radius: 15px;
+  padding: 6px 20px;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.comparison-content__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 5px 0;
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 2px;
+    background: #c4c4c4;
+  }
+}
+
+.comparison-content__stat {
+  font-weight: 600;
+}
+
+.comparison-content__stat-higher {
+  color: $ltblue;
+}
+
+.comparison-content__stat-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}

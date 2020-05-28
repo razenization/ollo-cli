@@ -1,0 +1,163 @@
+@import "../../../../../shared/vars";
+
+.crossing-matches {
+  margin-top: 1rem;
+}
+
+.crossing-matches__head {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.crossing-matches__subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $ltltgray;
+  border-radius: 15px;
+
+  > * {
+    width: 33.33333%;
+  }
+}
+
+.crossing-matches__subhead-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // > * {
+  //   width: 33.33333%;
+  // }
+}
+
+.subhead-stats__wins-count {
+  text-align: center;
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.subhead-stats__wins-text,
+.subhead-stats__total-text {
+  text-align: center;
+  color: $black;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.subhead-stats__total-count {
+  text-align: center;
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.wins-count_greater {
+  color: $ltblue;
+}
+
+.crossing-matches__team {
+  &:first-child {
+    justify-content: flex-start;
+  }
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.crossing-matches__teamimg {
+  max-width: 35px;
+}
+
+.crossing-matches__teamname {
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.crossing-matches__team {
+  display: flex;
+  align-items: center;
+}
+
+.crossing-matches__items {
+  display: flex;
+  align-items: center;
+}
+
+.crossing-matches__item {
+  width: 50%;
+  &:first-child {
+    margin-right: 5px;
+  }
+  &:last-child {
+    margin-left: 5px;
+  }
+}
+
+.crossing-matches__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.7rem;
+  background: $ltltgray;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.crossing-matches__content__date {
+  font-weight: 500;
+  color: $black;
+  width: 10%;
+}
+
+.crossing-matches__content__event {
+  color: $ltblue;
+  width: 25%;
+  white-space: nowrap;
+  text-align: right;
+  direction: rtl;
+}
+
+.crossing-matches__content__format {
+  font-weight: 600;
+  color: $ltblue;
+  font-size: 0.8rem;
+  width: 5%;
+}
+
+.crossing-matches__content__score {
+  font-weight: 600;
+  color: $ltblue;
+  font-size: 0.8rem;
+  color: $ltblue;
+  line-height: 1.1;
+  width: 5%;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.crossing-matches__score_winner {
+  color: $green;
+}
+
+.crossing-matches__content__team {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.crossing-matches__team-teamimg {
+  max-width: 20px;
+  margin: 0 5px;
+}
+
+.crossing-matches__team-teamname {
+  font-size: 0.8rem;
+  color: $black;
+  font-weight: 500;
+}

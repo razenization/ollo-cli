@@ -7,9 +7,13 @@ const Button = (props) => {
   if (props.href) {
     return (
       <a
-        className={`button ${props.inverse && "button--inverse"} ${
-          props.opacity && "button--opacity"
-        }`}
+        className={`button ${props.className ? props.className : ""} button--${
+          props.size || "default"
+        } ${props.green ? "button--green" : ""} ${
+          props.inverse ? "button--inverse" : ""
+        } ${props.danger ? "button--danger" : ""} ${
+          props.opacity ? "button--opacity" : ""
+        } ${props.opacityInv ? "button--opacity--inverse" : ""}`}
         href={props.href}
       >
         {props.children}
@@ -21,9 +25,13 @@ const Button = (props) => {
       <Link
         to={props.to}
         exact={props.exact}
-        className={`button button--${props.size || "default"} ${
-          props.inverse && "button--inverse"
-        } ${props.danger && "button--danger"}`}
+        className={`button ${props.className ? props.className : ""} button--${
+          props.size || "default"
+        } ${props.green ? "button--green" : ""} ${
+          props.inverse ? "button--inverse" : ""
+        } ${props.danger ? "button--danger" : ""} ${
+          props.opacity ? "button--opacity" : ""
+        } ${props.opacityInv ? "button--opacity--inverse" : ""}`}
       >
         {props.children}
       </Link>
@@ -31,11 +39,13 @@ const Button = (props) => {
   }
   return (
     <button
-      className={`button button--${props.size || "default"} ${
-        props.inverse && "button--inverse"
-      } ${props.green && "button--green"} ${props.danger && "button--danger"} ${
-        props.noMargin && "button--mdef"
-      }`}
+      className={`button ${props.className ? props.className : ""} button--${
+        props.size || "default"
+      } ${props.green ? "button--green" : ""} ${
+        props.inverse ? "button--inverse" : ""
+      } ${props.danger ? "button--danger" : ""} ${
+        props.opacity ? "button--opacity" : ""
+      } ${props.opacityInv ? "button--opacity--inverse" : ""}`}
       style={props.style}
       type={props.type}
       onClick={props.onClick}

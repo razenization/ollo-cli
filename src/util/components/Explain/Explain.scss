@@ -1,0 +1,44 @@
+@import "../../../shared/vars";
+
+.explain-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(196, 196, 196, 0.5);
+  position: relative;
+  vertical-align: middle;
+  margin-left: 3px;
+  text-align: center;
+  font-size: 11px;
+  color: #fff;
+  cursor: default;
+
+  &:hover {
+    .explain-text {
+      opacity: 1;
+    }
+  }
+}
+
+.explain-text {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  border-radius: 8px;
+  background: $black;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.12s;
+  pointer-events: none;
+  word-break: break-all;
+  padding: 5px;
+}
+
+.explain-blue {
+  background: rgba(43, 123, 251, 0.5);
+}

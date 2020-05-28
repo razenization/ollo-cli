@@ -1,0 +1,27 @@
+@import "../../../../../shared/vars";
+
+.comment-login {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.comment-login__text {
+  color: $ltblue;
+  font-weight: 500;
+}
+
+.comment-login__btn {
+  background: none;
+  font-weight: 500;
+  padding: 4px 10px;
+  border: 1px solid $ltblue;
+  border-radius: 1rem;
+  margin-left: 1.3rem;
+  color: $ltblue;
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

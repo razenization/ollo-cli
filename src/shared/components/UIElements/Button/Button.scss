@@ -34,6 +34,16 @@
   // }
 }
 
+.button--opacity--inverse {
+  background: $ltblue;
+  color: #fff;
+  &:hover,
+  &:active {
+    opacity: 0.9;
+    background: $ltblue;
+  }
+}
+
 .button--mdef {
   margin: 0;
 }

@@ -7,26 +7,26 @@ import LiveStreams from "../../components/main/streams/LiveStreams/LiveStreams";
 import StreamBody from "../../components/main/streams/StreamBody/StreamBody";
 import BetsInfo from "../../components/main/bets/BetsInfo/BetsInfo";
 import StatsContainer from "../../components/main/stats/StatsContainer/StatsContainer";
+import CommentsContainer from "../../components/main/comments/CommentsContainer/CommentsContainer";
+import Footer from "../../../shared/components/UIElements/Footer/Footer";
 
 const CsPrematch = () => {
   return (
-    <div className="pd-default">
+    <div className="pd-default grid nine-to-three">
       <Sidebar />
-      <div className="col-lg-9">
+      <div>
         <MatchHead />
-        <div className="row">
-          <div className="col-lg-6">
-            <MatchPicks />
-          </div>
-          <div className="col-lg-6">
-            <LiveStreams />
-          </div>
+        <div className="grid grid-half">
+          <MatchPicks />
+          <LiveStreams />
         </div>
         <StreamBody />
         <BetsInfo />
         <StatsContainer />
+        <CommentsContainer />
       </div>
-      <div className="col-lg-3"></div>
+      <div></div>
+      <Footer />
     </div>
   );
 };

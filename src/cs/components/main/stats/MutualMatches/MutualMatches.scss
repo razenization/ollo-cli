@@ -1,0 +1,163 @@
+@import "../../../../../shared/vars";
+
+.mutual-matches {
+  margin-top: 1rem;
+}
+
+.mutual-matches__head {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mutual-matches__subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $ltltgray;
+  border-radius: 15px;
+
+  > * {
+    width: 33.33333%;
+  }
+}
+
+.mutual-matches__subhead-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // > * {
+  //   width: 33.33333%;
+  // }
+}
+
+.subhead-stats__wins-count {
+  text-align: center;
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.subhead-stats__wins-text,
+.subhead-stats__total-text {
+  text-align: center;
+  color: $black;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.subhead-stats__total-count {
+  text-align: center;
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.wins-count_greater {
+  color: $ltblue;
+}
+
+.mutual-matches__team {
+  &:first-child {
+    justify-content: flex-start;
+  }
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.mutual-matches__teamimg {
+  max-width: 35px;
+}
+
+.mutual-matches__teamname {
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.mutual-matches__team {
+  display: flex;
+  align-items: center;
+}
+
+.mutual-matches__items {
+  display: flex;
+  align-items: center;
+}
+
+.mutual-matches__item {
+  width: 50%;
+  &:first-child {
+    margin-right: 5px;
+  }
+  &:last-child {
+    margin-left: 5px;
+  }
+}
+
+.mutual-matches__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.7rem;
+  background: $ltltgray;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.mutual-matches__content__date {
+  font-weight: 500;
+  color: $black;
+  width: 10%;
+}
+
+.mutual-matches__content__event {
+  color: $ltblue;
+  width: 25%;
+  white-space: nowrap;
+  text-align: right;
+  direction: rtl;
+}
+
+.mutual-matches__content__format {
+  font-weight: 600;
+  color: $ltblue;
+  font-size: 0.8rem;
+  width: 5%;
+}
+
+.mutual-matches__content__score {
+  font-weight: 600;
+  color: $ltblue;
+  font-size: 0.8rem;
+  color: $ltred;
+  line-height: 1.1;
+  width: 5%;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mutual-matches__score_winner {
+  color: $green;
+}
+
+.mutual-matches__content__team {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.mutual-matches__team-teamimg {
+  max-width: 20px;
+  margin: 0 5px;
+}
+
+.mutual-matches__team-teamname {
+  font-size: 0.8rem;
+  color: $black;
+  font-weight: 500;
+}
