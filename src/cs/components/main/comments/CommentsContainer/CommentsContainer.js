@@ -4,6 +4,7 @@ import "./CommentsContainer.scss";
 import { ReactComponent as SortIcon } from "./img/sort-icon.svg";
 import CommentLogin from "../CommentLogin/CommentLogin";
 import CommentInput from "../CommentInput/CommentInput";
+import CommentItems from "../CommentItems/CommentItems";
 
 const CommentsContainer = () => {
   return (
@@ -17,6 +18,7 @@ const CommentsContainer = () => {
       </div>
       <CommentLogin />
       <CommentInput />
+      <CommentItems />
     </div>
   );
 };

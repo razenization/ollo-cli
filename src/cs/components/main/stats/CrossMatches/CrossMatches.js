@@ -6,98 +6,63 @@ import vitality from "../../../../../shared/img/teams/vitality.svg";
 import spirit from "../../../../../shared/img/teams/spirit.svg";
 import Explain from "../../../../../util/components/Explain/Explain";
 
-const DUMMY_MUTUAL = [
+const DUMMY_CROSS = [
   {
-    team: "Vitality",
-    wins: 10,
-    matches: [
-      {
-        id: 1,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 2,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 3,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 4,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-    ],
+    id: 1,
+    vs: "Natus Vincere",
+    vslogo: vp,
+    team1: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
+    team2: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
   },
   {
-    team: "Spirit",
-    wins: 6,
-    matches: [
-      {
-        id: 1,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 2,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 3,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League 2020",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-      {
-        id: 4,
-        vs: "Natus Vincere",
-        vslogo: vp,
-        format: "BO3",
-        event: "ESL Pro League Katowice",
-        date: "25.04.20",
-        score: "2-0",
-        winner: true,
-      },
-    ],
+    id: 2,
+    vs: "Natus Vincere",
+    vslogo: vp,
+    team1: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
+    team2: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
+  },
+  {
+    id: 3,
+    vs: "Natus",
+    vslogo: vp,
+    team1: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
+    team2: {
+      format: "BO3",
+      score: "2-1",
+      winner: true,
+      date: "25.10.2019",
+      event: "ESL Pro League 2020",
+    },
   },
 ];
 
@@ -117,82 +82,54 @@ const CrossMatches = () => {
       <div className="crossing-matches__subhead">
         <div className="crossing-matches__team">
           <img src={vitality} alt="" className="crossing-matches__teamimg" />
-          <p className="crossing-matches__teamname">{DUMMY_MUTUAL[0].team}</p>
+          <p className="crossing-matches__teamname">Vitality</p>
         </div>
-        <div className="crossing-matches__subhead-stats">
-          <div className="subhead-stats__wins">
-            <div
-              className={`subhead-stats__wins-count${
-                DUMMY_MUTUAL[0].wins > DUMMY_MUTUAL[1].wins
-                  ? " wins-count_greater"
-                  : ""
-              }`}
-            >
-              {DUMMY_MUTUAL[0].wins}
-            </div>
-            <p className="subhead-stats__wins-text">Победы</p>
-          </div>
-          <div className="subhead-stats__total">
-            <p className="subhead-stats__total-count">
-              {DUMMY_MUTUAL[0].wins + DUMMY_MUTUAL[1].wins}
-            </p>
-            <p className="subhead-stats__total-text">Всего встреч</p>
-          </div>
-          <div className="subhead-stats__wins">
-            <div
-              className={`subhead-stats__wins-count${
-                DUMMY_MUTUAL[1].wins > DUMMY_MUTUAL[0].wins
-                  ? " wins-count_greater"
-                  : ""
-              }`}
-            >
-              {DUMMY_MUTUAL[1].wins}
-            </div>
-            <p className="subhead-stats__wins-text">Победы</p>
-          </div>
+        <div className="subhead-stats__total">
+          <p className="subhead-stats__total-count">{DUMMY_CROSS.length}</p>
+          <p className="subhead-stats__total-text">Всего встреч</p>
         </div>
         <div className="crossing-matches__team">
-          <p className="crossing-matches__teamname">{DUMMY_MUTUAL[1].team}</p>
+          <p className="crossing-matches__teamname">Spirit</p>
           <img src={spirit} alt="" className="crossing-matches__teamimg" />
         </div>
       </div>
       <div className="crossing-matches__items">
-        {DUMMY_MUTUAL.map((team, idx) => (
+        {DUMMY_CROSS.map((match, idx) => (
           <div key={idx} className="crossing-matches__item">
-            {team.matches.map((match, idx) => (
-              <div key={idx} className="crossing-matches__content">
-                <p className="crossing-matches__content__date">{match.date}</p>
-                <p className="crossing-matches__content__event">
-                  {match.event}
+            <div key={idx} className="crossing-matches__content">
+              <div className="crossing-matches__match">
+                <p className="crossing-matches__date">{match.team1.date}</p>
+                <p className="crossing-matches__event">{match.team1.event}</p>
+                <p className="crossing-matches__format">{match.team1.format}</p>
+                <p
+                  className={`crossing-matches__score${
+                    match.team1.winner ? " crossing-matches__score_winner" : ""
+                  }`}
+                >
+                  {match.team1.score}
                 </p>
-                <p className="crossing-matches__content__format">
-                  {match.format}
-                </p>
-                <div className="crossing-matches__content__team">
-                  <img
-                    src={vitality}
-                    alt=""
-                    className="crossing-matches__team-teamimg"
-                  />
-                  <p className="crossing-matches__team-teamname">
-                    {DUMMY_MUTUAL[0].team}
-                  </p>
-                </div>
-                <p className="crossing-matches__content__score">
-                  {match.score}
-                </p>
-                <div className="crossing-matches__content__team">
-                  <p className="crossing-matches__team-teamname">
-                    {DUMMY_MUTUAL[1].team}
-                  </p>
-                  <img
-                    src={spirit}
-                    alt=""
-                    className="crossing-matches__team-teamimg"
-                  />
-                </div>
               </div>
-            ))}
+              <div className="crossing-matches__vs">
+                <img
+                  src={match.vslogo}
+                  alt=""
+                  className="crossing-matches__vsimg"
+                />
+                <p className="crossing-matches__vsname">{match.vs}</p>
+              </div>
+              <div className="crossing-matches__match">
+                <p
+                  className={`crossing-matches__score${
+                    match.team2.winner ? " crossing-matches__score_winner" : ""
+                  }`}
+                >
+                  {match.team2.score}
+                </p>
+                <p className="crossing-matches__format">{match.team2.format}</p>
+                <p className="crossing-matches__event">{match.team2.event}</p>
+                <p className="crossing-matches__date">{match.team2.date}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

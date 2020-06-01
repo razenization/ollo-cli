@@ -9,6 +9,10 @@ import BetsInfo from "../../components/main/bets/BetsInfo/BetsInfo";
 import StatsContainer from "../../components/main/stats/StatsContainer/StatsContainer";
 import CommentsContainer from "../../components/main/comments/CommentsContainer/CommentsContainer";
 import Footer from "../../../shared/components/UIElements/Footer/Footer";
+import LiveOptions from "../../components/main/utilbar/LiveOptions/LiveOptions";
+import BookiesRating from "../../components/main/utilbar/BookiesRating/BookiesRating";
+import SocialNets from "../../components/main/utilbar/SocialNets/SocialNets";
+import GiveAway from "../../components/main/utilbar/GiveAway/GiveAway";
 
 const CsPrematch = () => {
   return (
@@ -25,7 +29,12 @@ const CsPrematch = () => {
         <StatsContainer />
         <CommentsContainer />
       </div>
-      <div></div>
+      <div>
+        <LiveOptions />
+        <BookiesRating />
+        <SocialNets />
+        <GiveAway />
+      </div>
       <Footer />
     </div>
   );

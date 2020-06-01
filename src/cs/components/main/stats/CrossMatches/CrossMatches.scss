@@ -24,7 +24,7 @@
 
 .crossing-matches__subhead-stats {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   // > * {
   //   width: 33.33333%;
@@ -85,59 +85,48 @@
 
 .crossing-matches__items {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .crossing-matches__item {
-  width: 50%;
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  background: $ltltgray;
+  border-radius: 15px;
+  margin: 7px 0;
   &:first-child {
-    margin-right: 5px;
-  }
-  &:last-child {
-    margin-left: 5px;
+    margin-top: 14px;
   }
 }
 
 .crossing-matches__content {
   display: flex;
   align-items: center;
+  font-size: 0.75rem;
+}
+
+.crossing-matches__match {
+  display: flex;
+  width: 40%;
   justify-content: space-between;
-  padding: 0.4rem 0.7rem;
-  background: $ltltgray;
-  border-radius: 10px;
-  margin: 10px 0;
-  font-size: 0.8rem;
 }
 
-.crossing-matches__content__date {
+.crossing-matches__date {
   font-weight: 500;
-  color: $black;
-  width: 10%;
 }
 
-.crossing-matches__content__event {
+.crossing-matches__event {
   color: $ltblue;
-  width: 25%;
-  white-space: nowrap;
-  text-align: right;
-  direction: rtl;
 }
 
-.crossing-matches__content__format {
+.crossing-matches__format {
   font-weight: 600;
   color: $ltblue;
-  font-size: 0.8rem;
-  width: 5%;
 }
 
-.crossing-matches__content__score {
+.crossing-matches__score {
   font-weight: 600;
-  color: $ltblue;
-  font-size: 0.8rem;
-  color: $ltblue;
-  line-height: 1.1;
-  width: 5%;
-  cursor: pointer;
+  color: $ltred;
   text-decoration: underline;
 }
 
@@ -145,19 +134,16 @@
   color: $green;
 }
 
-.crossing-matches__content__team {
-  width: 15%;
-  display: flex;
-  align-items: center;
+.crossing-matches__vs {
+  text-align: center;
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  width: 20%;
 }
 
-.crossing-matches__team-teamimg {
-  max-width: 20px;
-  margin: 0 5px;
-}
-
-.crossing-matches__team-teamname {
-  font-size: 0.8rem;
-  color: $black;
+.crossing-matches__vsname {
   font-weight: 500;
+  margin-left: 5px;
 }

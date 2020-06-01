@@ -1,0 +1,39 @@
+.giveaway {
+  text-align: center;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  background: linear-gradient(180deg, #2b6cd4 0%, #2b7bfb 100%);
+}
+
+.giveaway-item {
+  transform: scale(0.8);
+  margin-top: 0.5rem;
+}
+
+.giveaway-take {
+  width: 60%;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-top: -1rem;
+}
+
+.giveaway-item,
+.giveaway-take {
+  position: relative;
+  z-index: 10;
+}
+
+.giveaway-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.giveaway-bg-btm {
+  top: auto;
+  bottom: 0;
+}

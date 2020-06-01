@@ -9,6 +9,7 @@ import { ReactComponent as xstavka } from "./img/1xstavka.svg";
 import { ReactComponent as melbet } from "./img/melbet.svg";
 import { ReactComponent as winline } from "./img/winline.svg";
 import { ReactComponent as betcity } from "./img/betcity.svg";
+import { ReactComponent as PmPrem } from "./img/parimatch-premium.svg";
 
 import { ReactComponent as Gift } from "./img/gift.svg";
 
@@ -17,7 +18,13 @@ import spirit from "../../../../../shared/img/teams/spirit.svg";
 import BetCalculator from "../BetCalculator/BetCalculator";
 
 const DUMMY__BOKIES = [
-  { id: 1, img: parimatch, bonus: 1000, kefs: [3.21, 3.21] },
+  {
+    id: 1,
+    img: parimatch,
+    premiumImg: PmPrem,
+    bonus: 1000,
+    kefs: [3.21, 3.21],
+  },
   { id: 2, img: ggbet, bonus: 1000, kefs: [3.21, 3.21] },
   { id: 3, img: winline, bonus: 1000, kefs: [3.21, 3.21] },
   { id: 4, img: fonbet, bonus: 1000, kefs: [3.21, 3.21] },
@@ -61,27 +68,39 @@ const BetsInfo = () => {
           </div>
           <div className="bet-info__bookies">
             {DUMMY__BOKIES.map((bookie) => (
-              <div key={bookie.id} className="bet-info__bookie">
-                <div className="bet-info__bookie__bonuswrapper">
-                  <Gift />
-                  <p className="bet-info__bookie__bonus">{bookie.bonus}</p>
+              <>
+                <div
+                  key={bookie.id}
+                  className={`bet-info__bookie${
+                    bookie.premiumImg ? " bet-info__bookie_premium" : ""
+                  }`}
+                >
+                  <div className="bet-info__inner">
+                    <div className="bet-info__bookie__bonuswrapper">
+                      <Gift />
+                      <p className="bet-info__bookie__bonus">{bookie.bonus}</p>
+                    </div>
+                    <div className="bet-info__bookie__img">
+                      <bookie.img />
+                    </div>
+                    {bookie.kefs.map((kef) => (
+                      <p
+                        key={v4()}
+                        className={`bet-info__bookie__kef ${
+                          kef > bookie.kefs.find((findKef) => findKef !== kef)
+                            ? "kef-higher"
+                            : ""
+                        }`}
+                      >
+                        {kef}
+                      </p>
+                    ))}
+                  </div>
+                  {bookie.premiumImg && (
+                    <bookie.premiumImg className="bet-info__bookie__premimg" />
+                  )}
                 </div>
-                <div className="bet-info__bookie__img">
-                  <bookie.img />
-                </div>
-                {bookie.kefs.map((kef) => (
-                  <p
-                    key={v4()}
-                    className={`bet-info__bookie__kef ${
-                      kef > bookie.kefs.find((findKef) => findKef !== kef)
-                        ? "kef-higher"
-                        : ""
-                    }`}
-                  >
-                    {kef}
-                  </p>
-                ))}
-              </div>
+              </>
             ))}
           </div>
         </div>

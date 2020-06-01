@@ -28,3 +28,12 @@
     transform: rotate(45deg);
   }
 }
+
+.adjust-button_toggled {
+  &:after {
+    top: 3px;
+    border: none;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+  }
+}

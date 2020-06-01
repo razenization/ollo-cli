@@ -1,0 +1,162 @@
+@import "../../../../../shared/vars";
+
+.comment-item {
+  margin: 1rem 0;
+}
+
+.comment-item_green {
+  .comment-item__avatar {
+    background: $green;
+  }
+  .comment-item__actions {
+    > * {
+      background: $green;
+    }
+  }
+  .comment-item__body-author {
+    color: $green;
+  }
+}
+
+.comment-item_red {
+  .comment-item__avatar {
+    background: $ltred;
+  }
+  .comment-item__actions {
+    > * {
+      background: $ltred;
+    }
+  }
+  .comment-item__body-author {
+    color: $ltred;
+  }
+}
+
+.comment-item_purple {
+  .comment-item__avatar {
+    background: $purple;
+  }
+  .comment-item__actions {
+    > * {
+      background: $purple;
+    }
+  }
+  .comment-item__body-author {
+    color: $purple;
+  }
+}
+
+.comment-item_yellow {
+  .comment-item__avatar {
+    background: $yellow;
+  }
+  .comment-item__actions {
+    > * {
+      background: $yellow;
+    }
+  }
+  .comment-item__body-author {
+    color: $yellow;
+  }
+}
+
+.comment-item__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-item__body {
+  width: 90%;
+  margin-left: 5px;
+}
+
+.comment-item__body-info {
+  display: flex;
+  font-size: 0.6rem;
+  * {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  > * {
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      position: relative;
+      width: 11px;
+      height: 11px;
+      margin-right: 2px;
+      &:active,
+      &:focus {
+        outline: none;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        // transform: scale(1.1);
+      }
+    }
+    margin: 0 5px;
+    font-weight: 500;
+  }
+}
+
+.comment-info__ups {
+  color: $green;
+}
+
+.comment-info__downs {
+  color: $ltred;
+}
+
+.comment-info__replies-count {
+  color: $ltblue;
+}
+
+.comment-item__avatar {
+  align-self: flex-start;
+  width: 50px;
+  height: 50px;
+  background: $green;
+  border-radius: 15px;
+}
+
+.comment-item__actions {
+  width: 5%;
+  white-space: nowrap;
+  > * {
+    display: inline-block;
+    border: none;
+    background: orange;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin: 0 2px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.comment-replies {
+  width: 95%;
+  margin-left: auto;
+}
