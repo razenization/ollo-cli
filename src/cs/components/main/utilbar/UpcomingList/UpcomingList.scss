@@ -1,0 +1,108 @@
+@import "../../../../../shared/vars";
+
+.upcoming-list {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.upcoming-list__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.upcoming-list__switch {
+  margin-left: 5px;
+  margin-bottom: -5px;
+  &:hover {
+    svg {
+      path,
+      rect {
+        fill: $ltblue;
+      }
+    }
+  }
+  svg {
+    path,
+    rect {
+      transition: fill 0.22s;
+      fill: $ltgray;
+    }
+  }
+  > * {
+    cursor: pointer;
+    margin: 0 3px;
+  }
+}
+
+.upcoming-switch__item_active {
+  svg {
+    path,
+    rect {
+      fill: $ltblue;
+    }
+  }
+}
+
+.upcoming-list__type-switch {
+  margin-left: auto;
+  display: flex;
+  > * {
+    cursor: pointer;
+    color: $ltgray;
+    margin: 0 5px;
+    transition: color 0.22s;
+    &:hover {
+      color: $ltblue;
+    }
+  }
+}
+
+.upcoming-type-switch__item_active {
+  color: $ltblue;
+}
+
+.upcoming-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  padding: 7px 10px;
+  border-radius: 1rem;
+  margin: 7.5px 0;
+  &:nth-child(odd) {
+    background: $ltltgray;
+  }
+}
+
+.upcoming-list__item-team {
+  display: flex;
+  align-items: center;
+}
+
+.upcoming-team__name {
+  font-weight: 500;
+}
+
+.upcoming-team__logo {
+  &:first-child {
+    margin-right: 4px;
+  }
+  &:last-child {
+    margin-left: 4px;
+  }
+}
+
+.upcoming-item__timeleft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.5rem;
+  &:before {
+    content: "VS";
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}

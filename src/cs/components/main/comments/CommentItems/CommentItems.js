@@ -77,8 +77,9 @@ const DUMMY_COMMENTS = [
 const CommentItems = () => {
   return (
     <div className="comment-items">
-      {DUMMY_COMMENTS.map((comment) => (
+      {DUMMY_COMMENTS.map((comment, idx) => (
         <CommentItem
+          key={idx.toString()}
           color="yellow"
           author={comment.author}
           body={comment.body}

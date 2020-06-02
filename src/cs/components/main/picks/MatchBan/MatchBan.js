@@ -2,8 +2,6 @@ import React from "react";
 import "./MatchBan.scss";
 
 const MatchBan = ({ ban }) => {
-  console.log(ban);
-
   return (
     <div
       className={`match-picks__ban ${ban.map ? "match-picks__ban_banned" : ""}`}

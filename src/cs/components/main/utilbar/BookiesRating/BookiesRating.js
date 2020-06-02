@@ -12,6 +12,7 @@ import { ReactComponent as LinkIcon } from "./img/link.svg";
 import { ReactComponent as ReviewIcon } from "./img/review.svg";
 import gift from "./img/gift.svg";
 import AdjustButton from "../../../../../shared/components/UIElements/AdjustButton/AdjustButton";
+import { v4 } from "uuid";
 
 const DUMMY_BOOKIES = [
   {
@@ -82,11 +83,12 @@ const BookiesRating = () => {
       </p>
       <div className="bookies-rating__items">
         {DUMMY_BOOKIES.map((bookie, i) => (
-          <>
+          <React.Fragment key={v4()}>
             {i === 5 && (
               <AdjustButton onClick={() => setShowHidden(!showHidden)} />
             )}
             <div
+              key={i.toString()}
               className={`bookies-rating__item${
                 i >= 5 && !showHidden ? " bookies-rating__item_hidden" : ""
               }`}
@@ -95,11 +97,11 @@ const BookiesRating = () => {
               <div className="bookies-item__stars">
                 {Array.from(Array(5), (e, i) =>
                   i < bookie.stars ? (
-                    <i className="bookies-item__star">
+                    <i key={i.toString()} className="bookies-item__star">
                       <Star />
                     </i>
                   ) : (
-                    <i className="bookies-item__star">
+                    <i key={i.toString()} className="bookies-item__star">
                       <EmptyStar />
                     </i>
                   )
@@ -118,7 +120,7 @@ const BookiesRating = () => {
                 </button>
               </div>
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

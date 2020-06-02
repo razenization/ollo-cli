@@ -60,8 +60,9 @@ const CommentItem = (props) => {
 
       {props.replies && !!props.replies.length && (
         <div className="comment-replies">
-          {props.replies.map((reply) => (
+          {props.replies.map((reply, idx) => (
             <CommentItem
+              key={idx.toString()}
               author={reply.author}
               body={reply.body}
               ups={reply.ups}

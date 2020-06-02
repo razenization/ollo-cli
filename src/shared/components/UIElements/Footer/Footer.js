@@ -77,13 +77,14 @@ const Footer = () => {
     <div className="footer-content">
       <div className="footer-content__col">
         <div className="footer-social">
-          {DUMMY_SOCIAL.map((social) => (
+          {DUMMY_SOCIAL.map((social, idx) => (
             <Icon
+              key={idx.toString()}
               bigger={social.bigger}
               newPage={social.newPage}
               nofill={social.nofill}
               href={social.href}
-              to={social.to}
+              to={"/"} // DUMMY
               icon={<social.icon />}
             />
           ))}

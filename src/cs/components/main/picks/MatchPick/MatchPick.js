@@ -2,8 +2,6 @@ import React from "react";
 import "./MatchPick.scss";
 
 const MatchPick = ({ pick }) => {
-  console.log(pick);
-
   return (
     <div
       className={`match-picks__pick ${

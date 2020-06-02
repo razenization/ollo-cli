@@ -67,8 +67,8 @@ const BetsInfo = () => {
             </div>
           </div>
           <div className="bet-info__bookies">
-            {DUMMY__BOKIES.map((bookie) => (
-              <>
+            {DUMMY__BOKIES.map((bookie, idx) => (
+              <React.Fragment key={idx.toString()}>
                 <div
                   key={bookie.id}
                   className={`bet-info__bookie${
@@ -100,7 +100,7 @@ const BetsInfo = () => {
                     <bookie.premiumImg className="bet-info__bookie__premimg" />
                   )}
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

@@ -55,11 +55,11 @@ const DUMMY_LIVES = [
 const LiveOptions = () => {
   return (
     <div className="live-options">
-      {DUMMY_LIVES.map((live) => (
-        <Link to={live.to}>
+      {DUMMY_LIVES.map((live, i) => (
+        <Link key={i.toString()} to={live.to}>
           <div className="live-options__item">
-            {live.teams.map((team) => (
-              <div className="live-options__team">
+            {live.teams.map((team, idx) => (
+              <div key={idx.toString()} className="live-options__team">
                 <div className="live-team__imgwrap">
                   <img src={team.logo} alt="" className="live-team__img" />
                   <p className="live-team__name">{team.name}</p>

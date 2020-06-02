@@ -13,6 +13,7 @@ import LiveOptions from "../../components/main/utilbar/LiveOptions/LiveOptions";
 import BookiesRating from "../../components/main/utilbar/BookiesRating/BookiesRating";
 import SocialNets from "../../components/main/utilbar/SocialNets/SocialNets";
 import GiveAway from "../../components/main/utilbar/GiveAway/GiveAway";
+import UpcomingList from "../../components/main/utilbar/UpcomingList/UpcomingList";
 
 const CsPrematch = () => {
   return (
@@ -34,6 +35,7 @@ const CsPrematch = () => {
         <BookiesRating />
         <SocialNets />
         <GiveAway />
+        <UpcomingList />
       </div>
       <Footer />
     </div>

@@ -7,6 +7,7 @@ import { ReactComponent as Faceit } from "./img/faceit.svg";
 import vitality from "../../../../../shared/img/teams/vitality.svg";
 import spirit from "../../../../../shared/img/teams/spirit.svg";
 import social from "./img/social.svg";
+import { v4 } from "uuid";
 
 const DUMMY_SOCIAL = [
   {
@@ -246,19 +247,23 @@ const DUMMY_SOCIAL = [
 const SocialNets = () => {
   return (
     <div className="social-nets white-pd-rounded">
-      {DUMMY_SOCIAL.map((team) => (
-        <div className="social-nets__team">
+      {DUMMY_SOCIAL.map((team, idx) => (
+        <div key={idx.toString()} className="social-nets__team">
           <div className="social-team__head">
             <img src={team.logo} alt="" className="social-team__img" />
             <p className="social-team__name">{team.team}</p>
             <img src={social} alt="" className="social-team__headimg" />
           </div>
-          {team.players.map((player) => (
-            <div className="social-nets__player">
+          {team.players.map((player, idx) => (
+            <div key={v4()} className="social-nets__player">
               <p className="social-player__nick">{player.nick}</p>
               <div className="social-player__links">
                 {Object.values(player.social).map((socialLink) => (
-                  <a href={socialLink.link} className="social-player__link">
+                  <a
+                    key={v4()}
+                    href={socialLink.link}
+                    className="social-player__link"
+                  >
                     <socialLink.icon />
                   </a>
                 ))}
