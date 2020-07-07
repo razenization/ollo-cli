@@ -14,10 +14,39 @@
   color: $ltblue;
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
+  align-items: center;
+  margin: 20px 0;
   background: $ltltgray;
-  padding: 5px 10px;
+  padding: 8px 10px;
   border-radius: 1rem;
+  position: relative;
+}
+
+.bookies-rating__item_fav {
+  border: 1px solid $ltblue;
+}
+
+.bookies-rating__item_our-choice,
+.bookies-rating__item_user-choice {
+  &:after {
+    content: "Мы рекомендуем";
+    font-size: 0.5rem;
+    color: #fff;
+    background: $ltblue;
+    padding: 1px 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+  }
+}
+
+.bookies-rating__item_our-choice:after {
+  content: "Мы рекомендуем";
+}
+
+.bookies-rating__item_user-choice:after {
+  content: "Выбор пользователей";
 }
 
 .bookies-rating__item_hidden {
@@ -48,6 +77,7 @@
 }
 
 .bookies-item__actions {
+  display: flex;
   > * {
     width: 20px;
     height: 20px;

@@ -22,6 +22,7 @@ const DUMMY_BOOKIES = [
     bonus: 5000,
     href: "http://parimatch.com/",
     review: "bookies/parimatch/review",
+    ourFav: true,
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const DUMMY_BOOKIES = [
     bonus: 5000,
     href: "http://parimatch.com/",
     review: "bookies/parimatch/review",
+    userFav: true,
   },
   {
     id: 3,
@@ -91,6 +93,14 @@ const BookiesRating = () => {
               key={i.toString()}
               className={`bookies-rating__item${
                 i >= 5 && !showHidden ? " bookies-rating__item_hidden" : ""
+              }${
+                bookie.ourFav
+                  ? " bookies-rating__item_fav bookies-rating__item_our-choice"
+                  : ""
+              }${
+                bookie.userFav
+                  ? " bookies-rating__item_fav bookies-rating__item_user-choice"
+                  : ""
               }`}
             >
               <img src={bookie.logo} alt="" className="bookies-item__logo" />

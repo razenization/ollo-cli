@@ -1,0 +1,63 @@
+/* TG */
+.tg__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(0deg, #2b6cd4 0%, #2b7bfb 100%);
+  z-index: 1;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tg__info p {
+  z-index: 100;
+}
+
+@media (max-width: 991.98px) {
+  .tg__info {
+    height: 30vh;
+  }
+}
+
+.tg__text-wrapper {
+  width: 80%;
+}
+
+.tg__title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+@media (max-width: 1339.98px) {
+  .tg__title {
+    font-size: 16px;
+  }
+}
+
+.tg__subtitle {
+  font-weight: 700;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.tg__img {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: 10;
+}
+
+@media (max-width: 1339.98px) {
+  .tg__img {
+    height: 100%;
+    width: 80%;
+  }
+}

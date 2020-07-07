@@ -1,0 +1,115 @@
+@import "../../../../../shared/vars";
+
+.match-detail {
+  width: 350px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 200ms;
+  &.ra-enter {
+    opacity: 0;
+  }
+  &.ra-enter-active {
+    opacity: 1;
+  }
+  &.ra-exit-active {
+    opacity: 0;
+  }
+  &:after {
+    content: "";
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%) rotate(45deg);
+    margin-top: -10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+}
+
+.match-detail__content {
+  position: relative;
+  z-index: 51;
+}
+
+.match-detail__item {
+  border-radius: 1rem;
+  margin: 10px 0;
+}
+
+.match-detail__item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background: $ltltgray;
+  > * {
+    display: flex;
+    align-items: center;
+  }
+}
+.match-detail__team {
+  padding: 5px 10px;
+  width: 20%;
+  justify-content: space-around;
+}
+
+.match-detail__team-img {
+  max-width: 20px;
+}
+
+.match-detail__team-score {
+  margin: 0 0.5rem;
+}
+
+.match-detail__team-score_lost {
+  color: $ltred;
+}
+
+.match-detail__map {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  &:after {
+    content: "";
+    background: rgba(43, 123, 251, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.match-detail__map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.match-detail__map-name {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #fff;
+}
+
+.match-detail__link {
+  width: 100%;
+  background: none;
+  color: $ltblue;
+  border: 1px solid $ltblue;
+  border-radius: 1rem;
+}
